@@ -1,0 +1,84 @@
+@import url('vendor/normalize.css');
+@import url('vendor/fonts/fonts.css');
+@import url('blocks/page/page_content.css');
+@import url('blocks/page/page.css');
+@import url('blocks/header/header.css');
+@import url('blocks/header/__logo/header__logo.css');
+@import url('blocks/header/__text/header__text.css');
+@import url('blocks/header/__part/header__part.css');
+@import url('blocks/elements/elements.css');
+@import url('blocks/element/__image/element__image.css');
+@import url('blocks/element/__like/element__like.css');
+@import url('blocks/element/__name/element__name.css');
+@import url('blocks/element/element.css');
+@import url('blocks/footer/footer.css');
+@import url('blocks/footer/__copyrights/footer__copyrights.css');
+@import url('blocks/element/__group/element__group.css');
+@import url('blocks/profile/profile.css');
+@import url('blocks/profile/__add-button/profile__add-button.css');
+@import url('blocks/profile/__avatar/profile__avatar.css');
+@import url('blocks/profile/__avatar/__editButton/avatar__editButton.css');
+@import url('blocks/profile/__avatar/__pic/avatar__pic.css');
+@import url('blocks/profile/__description/profile__description.css');
+@import url('blocks/profile/__edit-button/profile__edit-button.css');
+@import url('blocks/profile/__info/profile__info.css');
+@import url('blocks/profile/__name/profile__name.css');
+@import url('blocks/profile/__part/profile__part.css');
+@import url('blocks/popup/popup.css');
+@import url('blocks/popup/__button/popup__button.css');
+@import url('blocks/popup/__close/popup__close.css');
+@import url('blocks/popup/__container/popup__container.css');
+@import url('blocks/popup/__form/popup__form.css');
+@import url('blocks/popup/__input/popup__input.css');
+@import url('blocks/popup/_opened/popup_opened.css');
+@import url('blocks/popup/__title/popup__title.css');
+@import url('blocks/body/body.css');
+@import url('blocks/profile/__addVector/profile__addVector.css');
+@import url('blocks/profile/__editVector/profile__editVector.css');
+@import url('blocks/element/__delete-card/element__delete-card.css');
+@import url('blocks/element/__delete-card/_visible/element__delete-card_visible.css');
+@import url('blocks/element/__like/_active/element__like_active.css');
+@import url('blocks/element/_likeCounter/element_likeCounter.css');
+@import url('blocks/element/_liking/element_liking.css');
+@import url('blocks/popup-image/__close/popup-image__close.css');
+@import url('blocks/popup-image/__container/popup-image__container.css');
+@import url('blocks/popup-image/__image/popup-image__image.css');
+@import url('blocks/popup-image/__text/popup-image__text.css');
+@import url('blocks/popup/__add-close/popup__add-close.css');
+@import url('blocks/popup-image/_opened/popup-image_opened.css');
+
+@import url('blocks/popup/__button/_type/popup__button_disabled.css');
+@import url('blocks/popup/__input/_type/popup__input_type_error.css');
+@import url('blocks/popup/__input-error/_active/popup__input-error_active.css');
+@import url('blocks/popup/__label/popup__label.css');
+
+@import url('blocks/popup-deleting/__container/popup-deleting__container.css');
+@import url('blocks/popup-deleting/__form/popup-deleting__form.css');
+@import url('blocks/popup-deleting/__form-button/popup-deleting__form-button.css');
+
+@import url('blocks/popup-avatar-editing/__container/popup-avatar-editing__container.css');
+@import url('blocks/popup-avatar-editing/__form/popup-avatar-editing__form.css');
+@import url('blocks/popup-avatar-editing/__input-error/popup-avatar-editing__input-error.css');
+
+@import url('blocks/infoTooltip/__image/infoTooltip__image.css');
+@import url('blocks/infoTooltip/__text/infoTooltip__text.css');
+@import url('blocks/auth/__title/auth__title.css');
+@import url('blocks/login/login.css');
+@import url('blocks/auth/__form/auth__form.css');
+@import url('blocks/auth/__input/auth__input.css');
+@import url('blocks/auth/__button/auth__button.css');
+@import url('blocks/register/register.css');
+@import url('blocks/register/__text/register__text.css');
+@import url('blocks/register/__link/register__link.css');
+@import url('blocks/register/register.css');
+
+html {
+    background-color: #000;
+}
+
+.grey{
+    color: #A9A9A9;
+}
+.grey:hover{
+    color: #FFFFFF;
+}

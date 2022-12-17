@@ -1,0 +1,43 @@
+{
+  "name": "express-mesto-gha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "echo \\\"Error: no test specified\\\" && exit 1",
+    "lint": "npx eslint .",
+    "dev": "nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alsumukhamedova/express-mesto-gha.git"
+  },
+  "author": "Alsu Mukhamedova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alsumukhamedova/express-mesto-gha/issues"
+  },
+  "homepage": "https://github.com/alsumukhamedova/express-mesto-gha#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "celebrate": "^15.0.1",
+    "express": "^4.18.2",
+    "express-winston": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^6.2.4",
+    "validator": "^13.7.0",
+    "winston": "^3.8.2",
+    "winston-express": "^0.1.1"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.15"
+  }
+}

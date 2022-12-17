@@ -1,0 +1,8 @@
+.auth__button {
+    color: black;
+    margin-top: 216px;
+    background-color: white;
+}
+.auth__button:hover{
+    opacity: 80%;
+}
