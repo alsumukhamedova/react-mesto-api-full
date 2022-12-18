@@ -1,5 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
+require('dotenv').config();
+
 const { errors, Joi, celebrate } = require('celebrate');
 const users = require('./routes/users');
 const cardRouter = require('./routes/cards');
@@ -14,7 +17,6 @@ const {
   STATUS_INTERNAL,
 } = require('./utils/constants');
 
-require('dotenv').config();
 console.log(process.env.NODE_ENV);
 
 const app = express();
