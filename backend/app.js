@@ -14,6 +14,9 @@ const {
   STATUS_INTERNAL,
 } = require('./utils/constants');
 
+require('dotenv').config();
+console.log(process.env.NODE_ENV);
+
 const app = express();
 
 app.use(express.json());
@@ -22,12 +25,12 @@ mongoose.connect('mongodb://0.0.0.0:27017/mestodb', {
   useNewUrlParser: true,
 });
 
-app.use((req, res, next) => {
-  req.user = {
-    _id: '6354232509ef3153343b6f84',
-  };
-  next();
-});
+// app.use((req, res, next) => {
+//   req.user = {
+//     _id: '6354232509ef3153343b6f84',
+//   };
+//   next();
+// });
 app.use(requestLogger);
 app.post('/signin', celebrate({
   body: Joi.object().keys({
