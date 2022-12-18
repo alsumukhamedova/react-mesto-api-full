@@ -6,6 +6,7 @@ const { Conflicted } = require('../errors/Conflicted');
 
 const User = require('../models/user');
 const { STATUS_CREATED } = require('../utils/constants');
+
 const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
@@ -130,12 +131,12 @@ module.exports.login = (req, res, next) => {
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
-        const token = jwt.sign(
-            { _id: user._id},
-            NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
-            {expiresIn: '7d'}
-        );
-        return res.send({ token });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret',
+        { expiresIn: '7d' },
+      );
+      return res.send({ token });
     })
     .catch((err) => {
       next(err);

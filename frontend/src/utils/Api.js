@@ -97,7 +97,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-45',
+    baseUrl: 'https://mesto.owlsu.space/api',
     headers: {
         Accept: 'application/json',
         authorization: '5aabf6d0-afc9-4754-bb00-4c52b48cbb27',
