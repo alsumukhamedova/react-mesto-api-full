@@ -221,7 +221,7 @@ function App() {
                             </Route>
 
                             <ProtectedRoute path="/"
-                                            loggedIn={loggedIn}
+                                            loggedIn={handleLogin}
                                             onEditAvatar={setIsEditProfileAvatarPopupOpen}
                                             onEditProfile={setIsEditProfilePopupOpen}
                                             onAddCard={setIsAddCardPopupOpen}
