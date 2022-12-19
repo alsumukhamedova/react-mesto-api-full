@@ -1,7 +1,10 @@
 class Api {
     constructor(options) {
         this._baseUrl = options.baseUrl;
-        this._headers = options.headers;
+    }
+
+    getToken() {
+        return `Bearer ${localStorage.getItem('token')}`
     }
 
     getResponseData(res) {
@@ -13,16 +16,22 @@ class Api {
 
     getInitialCards() {
         return fetch(`${this._baseUrl}/cards`, {
-            headers: this._headers
-        })
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: this.getToken(),
+            }}
+        )
             .then((res) =>
-                this.getResponseData(res)
+            this.getResponseData(res)
             )
     }
 
     getProfileInfo() {
         return fetch(`${this._baseUrl}/users/me`, {
-            headers: this._headers
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: this.getToken(),
+            }
         })
             .then((res) =>
                 this.getResponseData(res)
@@ -31,7 +40,10 @@ class Api {
 
     updateProfileInfo(data) {
         return fetch(`${this._baseUrl}/users/me`, {
-            headers: this._headers,
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: this.getToken(),
+              },
             method: 'PATCH',
             body: JSON.stringify(data)
         })
@@ -42,7 +54,10 @@ class Api {
 
     createNewCard(data) {
         return fetch(`${this._baseUrl}/cards`, {
-            headers: this._headers,
+            headers: {
+            'Content-Type': 'application/json',
+            authorization: this.getToken(),
+          },
             method: 'POST',
             body: JSON.stringify(data)
         })
@@ -53,7 +68,10 @@ class Api {
 
     deleteCard(data, cardId) {
         return fetch(`${this._baseUrl}/cards/${cardId}`, {
-            headers: this._headers,
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: this.getToken(),
+              },
             method: 'DELETE',
             body: JSON.stringify(data)
         })
@@ -64,7 +82,10 @@ class Api {
 
     updateProfileAvatar(data) {
         return fetch(`${this._baseUrl}/users/me/avatar`, {
-            headers: this._headers,
+            headers: {
+            'Content-Type': 'application/json',
+            authorization: this.getToken(),
+          },
             method: 'PATCH',
             body: JSON.stringify(data)
         })
@@ -75,7 +96,10 @@ class Api {
 
     likeCard(data, cardId) {
         return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-            headers: this._headers,
+            headers: {
+            'Content-Type': 'application/json',
+            authorization: this.getToken(),
+          },
             method: 'PUT',
             body: JSON.stringify(data)
         })
@@ -86,7 +110,10 @@ class Api {
 
     dislikeCard(data, cardId) {
         return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
-            headers: this._headers,
+            headers: {
+            'Content-Type': 'application/json',
+            authorization: this.getToken(),
+          },
             method: 'DELETE',
             body: JSON.stringify(data)
         })
@@ -97,12 +124,7 @@ class Api {
 }
 
 const api = new Api({
-    baseUrl: 'https://mesto.owlsu.space/api',
-    headers: {
-        Accept: 'application/json',
-        authorization: '5aabf6d0-afc9-4754-bb00-4c52b48cbb27',
-        'Content-Type': 'application/json'
-    }
+    baseUrl: 'https://mesto.owlsu.space/api'
 });
 
 export default api;

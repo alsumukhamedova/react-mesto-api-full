@@ -50,7 +50,7 @@ function App() {
                 })
             api.getInitialCards().then((data) => {
                 setCards(
-                    data.map((card) => ({
+                    data.data.map((card) => ({
                         _id: card._id,
                         link: card.link,
                         name: card.name,
