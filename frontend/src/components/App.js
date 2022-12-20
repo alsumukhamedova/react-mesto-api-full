@@ -6,7 +6,6 @@ import Main from './Main.js';
 import PopupWithForm from './PopupWithForm.js';
 import ImagePopup from './ImagePopup.js';
 import {CurrentUserContext} from '../contexts/CurrentUserContext.js';
-import {CardContext} from '../contexts/CardContext.js';
 import api from "../utils/Api";
 import EditProfileAvatarPopup from './EditProfileAvatarPopup.js';
 import EditProfilePopup from './EditProfilePopup.js';
@@ -40,6 +39,7 @@ function App() {
     React.useEffect(() => {
         if (loggedIn) {
             api.getProfileInfo().then((userStats) => {
+                console.log(userStats)
                 setCurrentUser(
                     userStats
                 )

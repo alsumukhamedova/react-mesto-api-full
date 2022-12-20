@@ -37,7 +37,7 @@ module.exports.getThisUserInfo = (req, res, next) => {
       throw new DocumentNotFoundError('Недостаточно данных');
     })
     .then((data) => {
-      res.send({ data });
+      res.send(data);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
