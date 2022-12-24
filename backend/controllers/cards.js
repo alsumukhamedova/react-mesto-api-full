@@ -9,7 +9,7 @@ const {
 } = require('../utils/constants');
 
 module.exports.getCards = (req, res, next) => {
-  Card.find().populate('owner').populate('likes')
+  Card.find().populate('owner')
     .then((cards) => {
       res.send({ data: cards });
     })
